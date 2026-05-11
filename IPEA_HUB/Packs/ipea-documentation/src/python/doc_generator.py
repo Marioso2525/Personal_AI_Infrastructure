@@ -38,9 +38,6 @@ COMPANY_DEFAULTS = {
 }
 
 
-@dataclass_like_class = None
-
-
 def generate_descriptive_memory(
     project_name: str,
     project_number: str,
