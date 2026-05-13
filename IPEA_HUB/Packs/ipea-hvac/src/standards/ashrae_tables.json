@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "standards": ["ASHRAE 62.1-2022", "ASHRAE 90.1-2022", "ASHRAE Fundamentals 2021"],
+    "description": "Tablas de referencia ASHRAE para diseño HVAC en México",
+    "version": "2022"
+  },
+
+  "ventilation_rates": {
+    "_reference": "ASHRAE 62.1-2022 Table 6-1",
+    "_description": "Tasas de ventilación mínima por tipo de espacio",
+    "_units": { "per_person": "L/s/persona", "per_area": "L/s/m²" },
+    "office": { "per_person": 10.0, "per_area": 0.30, "default_occupancy": 0.05 },
+    "conference_room": { "per_person": 10.0, "per_area": 0.30, "default_occupancy": 0.50 },
+    "classroom": { "per_person": 8.0, "per_area": 0.60, "default_occupancy": 0.35 },
+    "restaurant_dining": { "per_person": 10.0, "per_area": 0.90, "default_occupancy": 0.70 },
+    "kitchen_commercial": { "per_person": 7.5, "per_area": 7.50, "default_occupancy": 0.20 },
+    "retail_sales_floor": { "per_person": 7.5, "per_area": 0.90, "default_occupancy": 0.15 },
+    "hotel_lobby": { "per_person": 7.5, "per_area": 0.30, "default_occupancy": 0.30 },
+    "hotel_bedroom": { "per_person": 10.0, "per_area": 0.30, "default_occupancy": 0.10 },
+    "gym_fitness": { "per_person": 10.0, "per_area": 0.60, "default_occupancy": 0.25 },
+    "lobby_reception": { "per_person": 7.5, "per_area": 0.30, "default_occupancy": 0.10 },
+    "corridor": { "per_person": 2.5, "per_area": 0.30, "default_occupancy": 0.05 },
+    "restroom": { "per_person": 0.0, "per_area": 0.0, "exhaust_L_s_per_fixture": 25 }
+  },
+
+  "design_conditions_mexico": {
+    "_reference": "ASHRAE Fundamentals 2021 Chapter 14 + CONAGUA",
+    "_description": "Condiciones de diseño exteriores para ciudades principales de México",
+    "cancun": {
+      "db_summer_C": 35, "wb_summer_C": 28, "rh_summer_pct": 78,
+      "db_winter_C": 18, "rh_winter_pct": 70, "latitude_deg": 21.2
+    },
+    "merida": {
+      "db_summer_C": 38, "wb_summer_C": 27, "rh_summer_pct": 65,
+      "db_winter_C": 16, "rh_winter_pct": 65, "latitude_deg": 20.9
+    },
+    "monterrey": {
+      "db_summer_C": 42, "wb_summer_C": 24, "rh_summer_pct": 35,
+      "db_winter_C": 5,  "rh_winter_pct": 50, "latitude_deg": 25.7
+    },
+    "guadalajara": {
+      "db_summer_C": 35, "wb_summer_C": 20, "rh_summer_pct": 40,
+      "db_winter_C": 10, "rh_winter_pct": 45, "latitude_deg": 20.7
+    },
+    "ciudad_de_mexico": {
+      "db_summer_C": 30, "wb_summer_C": 18, "rh_summer_pct": 50,
+      "db_winter_C": 6,  "rh_winter_pct": 55, "latitude_deg": 19.4
+    },
+    "hermosillo": {
+      "db_summer_C": 46, "wb_summer_C": 23, "rh_summer_pct": 18,
+      "db_winter_C": 3,  "rh_winter_pct": 40, "latitude_deg": 29.1
+    },
+    "veracruz": {
+      "db_summer_C": 36, "wb_summer_C": 29, "rh_summer_pct": 80,
+      "db_winter_C": 16, "rh_winter_pct": 75, "latitude_deg": 19.2
+    },
+    "tijuana": {
+      "db_summer_C": 32, "wb_summer_C": 22, "rh_summer_pct": 55,
+      "db_winter_C": 8,  "rh_winter_pct": 60, "latitude_deg": 32.5
+    }
+  },
+
+  "interior_design_conditions": {
+    "_reference": "ASHRAE 55-2020",
+    "cooling_summer": { "db_C": 23, "rh_pct": 50, "tolerance_C": 1.0 },
+    "heating_winter": { "db_C": 21, "rh_pct": 40, "tolerance_C": 1.0 }
+  },
+
+  "heat_gain_people": {
+    "_reference": "ASHRAE Fundamentals 2021 Table 1, Chapter 18",
+    "_units": "Watts por persona",
+    "seated_at_rest":      { "total_W": 115, "sensible_W": 70,  "latent_W": 45 },
+    "seated_office":       { "total_W": 130, "sensible_W": 73,  "latent_W": 57 },
+    "standing_light_work": { "total_W": 130, "sensible_W": 75,  "latent_W": 55 },
+    "walking_3kmh":        { "total_W": 160, "sensible_W": 75,  "latent_W": 85 },
+    "sedentary_restaurant":{ "total_W": 150, "sensible_W": 60,  "latent_W": 90 },
+    "light_bench_work":    { "total_W": 185, "sensible_W": 75,  "latent_W": 110 },
+    "moderate_dancing":    { "total_W": 305, "sensible_W": 90,  "latent_W": 215 },
+    "heavy_work":          { "total_W": 515, "sensible_W": 170, "latent_W": 345 }
+  },
+
+  "heat_gain_lighting": {
+    "_reference": "ASHRAE Fundamentals 2021 Chapter 18",
+    "_units": "W/m²",
+    "office_general":      { "W_per_m2": 10, "ballast_factor": 1.25 },
+    "office_led":          { "W_per_m2": 8,  "ballast_factor": 1.0 },
+    "retail":              { "W_per_m2": 20, "ballast_factor": 1.20 },
+    "hotel_corridor":      { "W_per_m2": 6,  "ballast_factor": 1.0 },
+    "restaurant":          { "W_per_m2": 15, "ballast_factor": 1.20 },
+    "warehouse":           { "W_per_m2": 5,  "ballast_factor": 1.0 }
+  },
+
+  "u_values_typical": {
+    "_reference": "ASHRAE 90.1-2022 Climate Zone 1A (Cancún/Mérida equivalent)",
+    "_units": "W/(m²·K)",
+    "roof_insulated":         0.25,
+    "roof_uninsulated":       0.80,
+    "wall_concrete_insul":    0.40,
+    "wall_concrete_no_insul": 1.20,
+    "wall_block_insul":       0.45,
+    "window_single_clear":    5.80,
+    "window_double_clear":    3.00,
+    "window_double_low_e":    1.80,
+    "window_triple_low_e":    1.10,
+    "floor_slab_on_grade":    0.50
+  },
+
+  "shgc_values": {
+    "_reference": "ASHRAE 90.1-2022 Table A2.3",
+    "_description": "Solar Heat Gain Coefficient",
+    "single_clear":   0.86,
+    "double_clear":   0.76,
+    "double_tint":    0.45,
+    "double_low_e":   0.30,
+    "triple_low_e":   0.20,
+    "with_blinds_internal_factor": 0.65
+  },
+
+  "duct_velocity_limits": {
+    "_reference": "ASHRAE HVAC Systems and Equipment / SMACNA",
+    "_units": "m/s",
+    "supply_main_low_velocity":    { "max": 7.5, "recommended": 5.0 },
+    "supply_main_high_velocity":   { "max": 12.5, "recommended": 10.0 },
+    "supply_branch_low_velocity":  { "max": 6.0, "recommended": 4.5 },
+    "supply_branch_high_velocity": { "max": 9.0, "recommended": 7.5 },
+    "return_main":                 { "max": 6.0, "recommended": 4.5 },
+    "return_branch":               { "max": 4.5, "recommended": 3.5 },
+    "exhaust_main":                { "max": 5.0, "recommended": 4.0 },
+    "outside_air":                 { "max": 4.0, "recommended": 3.0 }
+  },
+
+  "refrigerant_equivalents": {
+    "_description": "Equivalencias toneladas de refrigeración",
+    "1_ton_refrigeration_W": 3517,
+    "1_ton_refrigeration_BTU_h": 12000,
+    "1_kW_to_tons": 0.2844,
+    "1_ton_to_kW": 3.517
+  }
+}

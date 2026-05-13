@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "standards": ["NOM-004-CNA-1996", "NOM-006-CNA-1997", "IPC-2021", "NMX-C-271"],
+    "description": "Tablas normativas para instalaciones hidráulicas y sanitarias en México",
+    "version": "1996-2021"
+  },
+
+  "design_pressures": {
+    "_reference": "NOM-004-CNA / IPC §604",
+    "_units": "kPa",
+    "minimum_service_pressure": 138,
+    "maximum_service_pressure": 550,
+    "recommended_design_pressure": 350,
+    "minimum_at_fixture": 103,
+    "maximum_at_fixture": 550,
+    "pressure_reducing_valve_required_above_kPa": 550
+  },
+
+  "flow_velocities": {
+    "_reference": "NOM-004-CNA §5 / IPC §604.3",
+    "_units": "m/s",
+    "cold_water_min": 0.60,
+    "cold_water_max": 2.50,
+    "hot_water_min": 0.60,
+    "hot_water_max": 2.00,
+    "drain_gravity_min": 0.60,
+    "drain_gravity_max": 3.00,
+    "note": "Velocidades fuera de rango causan ruido, erosión o sedimentos"
+  },
+
+  "pipe_materials": {
+    "water_supply": {
+      "cpvc": {
+        "standard": "NMX-C-271 / ASTM D2846",
+        "max_temp_C": 93,
+        "max_pressure_kPa": 1380,
+        "applications": ["Agua fría", "Agua caliente doméstica"],
+        "hazen_williams_C": 140
+      },
+      "copper_type_l": {
+        "standard": "ASTM B88 Tipo L",
+        "max_temp_C": 120,
+        "max_pressure_kPa": 1700,
+        "applications": ["Agua caliente", "Recirculación", "Instalaciones hospitalarias"],
+        "hazen_williams_C": 130
+      },
+      "hdpe": {
+        "standard": "NMX-E-255 / ISO 4427",
+        "max_temp_C": 60,
+        "max_pressure_kPa": 1600,
+        "applications": ["Agua fría", "Instalaciones enterradas"],
+        "hazen_williams_C": 150
+      },
+      "galvanized_steel": {
+        "standard": "ASTM A53",
+        "max_temp_C": 60,
+        "applications": ["Agua fría (no recomendado para agua caliente)"],
+        "hazen_williams_C": 100,
+        "note": "No recomendado — corrosión interna"
+      }
+    },
+    "drain_waste_vent": {
+      "pvc_dwv": {
+        "standard": "NMX-E-022 / ASTM D2665",
+        "applications": ["Drenaje", "Ventilación", "Pluvial"],
+        "max_temp_C": 60,
+        "note": "No usar para agua caliente >60°C"
+      },
+      "abs_dwv": {
+        "standard": "ASTM D2661",
+        "applications": ["Drenaje doméstico", "Ventilación"]
+      },
+      "cast_iron": {
+        "standard": "ASTM A888",
+        "applications": ["Drenaje industrial", "Hospitales", "Alta durabilidad"]
+      }
+    }
+  },
+
+  "fixture_units_hunter": {
+    "_reference": "IPC-2021 Table 702.1 / NOM-004-CNA Anexo",
+    "_description": "Unidades de mueble (UM) según tipo de artefacto",
+    "lavabo_privado":             { "cold_FU": 1, "hot_FU": 1, "drain_FU": 2, "min_pipe_mm": 32 },
+    "lavabo_publico":             { "cold_FU": 2, "hot_FU": 2, "drain_FU": 2, "min_pipe_mm": 32 },
+    "WC_tanque":                  { "cold_FU": 3, "hot_FU": 0, "drain_FU": 4, "min_pipe_mm": 100 },
+    "WC_fluxometro":              { "cold_FU": 6, "hot_FU": 0, "drain_FU": 4, "min_pipe_mm": 100 },
+    "WC_tanque_privado":          { "cold_FU": 2, "hot_FU": 0, "drain_FU": 3, "min_pipe_mm": 75  },
+    "urinario_fluxometro":        { "cold_FU": 5, "hot_FU": 0, "drain_FU": 4, "min_pipe_mm": 50  },
+    "urinario_tanque":            { "cold_FU": 3, "hot_FU": 0, "drain_FU": 2, "min_pipe_mm": 50  },
+    "regadera":                   { "cold_FU": 2, "hot_FU": 2, "drain_FU": 2, "min_pipe_mm": 50  },
+    "tina_hidro":                 { "cold_FU": 2, "hot_FU": 2, "drain_FU": 4, "min_pipe_mm": 50  },
+    "fregadero_domestico":        { "cold_FU": 2, "hot_FU": 2, "drain_FU": 2, "min_pipe_mm": 50  },
+    "fregadero_comercial":        { "cold_FU": 4, "hot_FU": 4, "drain_FU": 4, "min_pipe_mm": 50  },
+    "lavarropa_domestica":        { "cold_FU": 3, "hot_FU": 3, "drain_FU": 3, "min_pipe_mm": 50  },
+    "lavarropa_comercial":        { "cold_FU": 4, "hot_FU": 4, "drain_FU": 4, "min_pipe_mm": 75  },
+    "lavadero":                   { "cold_FU": 3, "hot_FU": 3, "drain_FU": 4, "min_pipe_mm": 50  },
+    "bebedero":                   { "cold_FU": 1, "hot_FU": 0, "drain_FU": 1, "min_pipe_mm": 32  },
+    "tornaviaje_3_4":             { "cold_FU": 2, "hot_FU": 0, "drain_FU": 0, "min_pipe_mm": 19  },
+    "tornaviaje_1":               { "cold_FU": 4, "hot_FU": 0, "drain_FU": 0, "min_pipe_mm": 25  },
+    "manguera_jardin":            { "cold_FU": 4, "hot_FU": 0, "drain_FU": 0, "min_pipe_mm": 19  },
+    "lavavajillas_comercial":     { "cold_FU": 4, "hot_FU": 4, "drain_FU": 4, "min_pipe_mm": 50  }
+  },
+
+  "drain_pipe_sizing": {
+    "_reference": "IPC-2021 Table 710.1(2) — Drains on 2% slope",
+    "_units": "mm diámetro / unidades mueble máximas",
+    "50mm":  { "max_FU_horizontal": 8,   "max_FU_vertical": 24  },
+    "75mm":  { "max_FU_horizontal": 20,  "max_FU_vertical": 70  },
+    "100mm": { "max_FU_horizontal": 160, "max_FU_vertical": 500 },
+    "125mm": { "max_FU_horizontal": 360, "max_FU_vertical": 1100},
+    "150mm": { "max_FU_horizontal": 620, "max_FU_vertical": 1900},
+    "200mm": { "max_FU_horizontal": 1400,"max_FU_vertical": 3600}
+  },
+
+  "vent_pipe_sizing": {
+    "_reference": "IPC-2021 Table 906.1",
+    "_units": "mm diámetro mínimo",
+    "50mm_drain":  { "min_vent_mm": 32 },
+    "75mm_drain":  { "min_vent_mm": 38 },
+    "100mm_drain": { "min_vent_mm": 50 },
+    "150mm_drain": { "min_vent_mm": 75 }
+  },
+
+  "storage_capacity": {
+    "_reference": "NOM-004-CNA / IMSS / Dotación per cápita",
+    "_units": "Litros por persona por día",
+    "residential_minimum": 150,
+    "residential_recommended": 200,
+    "office": 20,
+    "school": 25,
+    "hospital_bed": 500,
+    "hotel_room": 300,
+    "restaurant_per_seat": 20,
+    "cistern_min_days": 1,
+    "roof_tank_min_days": 0.5
+  },
+
+  "pipe_slope_minimum": {
+    "_reference": "IPC §704.1",
+    "_units": "m/m (pendiente mínima)",
+    "50mm_and_less": 0.0208,
+    "75mm_to_100mm": 0.0104,
+    "125mm_and_above": 0.0052
+  }
+}

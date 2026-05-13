@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "standard": "IPEA_HUB CAD Layer Standard v1.0",
+    "description": "Estándar de capas AutoCAD para proyectos MEP",
+    "reference": "AIA CAD Layer Guidelines / NMX-Z-13-IMNC-2009",
+    "version": "1.0"
+  },
+
+  "naming_convention": {
+    "format": "{DISCIPLINA}-{ELEMENTO}-{SUBTIPO}",
+    "example": "E-ALIMENTADORES-120V",
+    "rules": [
+      "Usar guiones como separadores",
+      "Todo en MAYÚSCULAS",
+      "Sin espacios",
+      "Sin caracteres especiales excepto guión"
+    ]
+  },
+
+  "discipline_prefixes": {
+    "A": "Arquitectura",
+    "E": "Eléctrico",
+    "M": "Mecánico / HVAC",
+    "H": "Hidráulico / Agua Potable",
+    "S": "Sanitario / Drenaje",
+    "G": "Gas",
+    "I": "Instrumentación / Control",
+    "C": "Comunicaciones / Voz-Datos",
+    "F": "Protección contra Incendio",
+    "B": "BIM / Coordinación",
+    "X": "General / Referencia",
+    "0": "Defpoints (solo bloques)"
+  },
+
+  "electrical_layers": {
+    "E-ALIMENTADORES":      { "color": 2,  "linetype": "Continuous", "lineweight": 0.50, "description": "Alimentadores principales" },
+    "E-ALIMENTADORES-BT":   { "color": 2,  "linetype": "Continuous", "lineweight": 0.50, "description": "Alimentadores baja tensión" },
+    "E-ALIMENTADORES-MT":   { "color": 6,  "linetype": "Continuous", "lineweight": 0.70, "description": "Alimentadores media tensión" },
+    "E-CIRCUITOS":          { "color": 3,  "linetype": "Continuous", "lineweight": 0.35, "description": "Circuitos ramales" },
+    "E-CIRCUITOS-ILU":      { "color": 3,  "linetype": "Continuous", "lineweight": 0.25, "description": "Circuitos de iluminación" },
+    "E-CIRCUITOS-CONT":     { "color": 30, "linetype": "Continuous", "lineweight": 0.25, "description": "Circuitos de contactos" },
+    "E-CIRCUITOS-FZA":      { "color": 1,  "linetype": "Continuous", "lineweight": 0.35, "description": "Circuitos de fuerza / motores" },
+    "E-ILUMINACION":        { "color": 3,  "linetype": "Continuous", "lineweight": 0.18, "description": "Luminarias y símbolos" },
+    "E-CONTACTOS":          { "color": 30, "linetype": "Continuous", "lineweight": 0.18, "description": "Contactos y apagadores" },
+    "E-TABLEROS":           { "color": 5,  "linetype": "Continuous", "lineweight": 0.50, "description": "Tableros eléctricos" },
+    "E-TABLEROS-SIMB":      { "color": 5,  "linetype": "Continuous", "lineweight": 0.35, "description": "Símbolos de tableros" },
+    "E-CANALIZACION":       { "color": 9,  "linetype": "HIDDEN",     "lineweight": 0.18, "description": "Canalizaciones / conduit" },
+    "E-CANALIZACION-EXP":   { "color": 9,  "linetype": "Continuous", "lineweight": 0.18, "description": "Canalizaciones expuestas" },
+    "E-TRANSFORMADORES":    { "color": 6,  "linetype": "Continuous", "lineweight": 0.50, "description": "Transformadores" },
+    "E-GENERADOR":          { "color": 1,  "linetype": "Continuous", "lineweight": 0.50, "description": "Planta de emergencia" },
+    "E-UPS":                { "color": 4,  "linetype": "Continuous", "lineweight": 0.35, "description": "UPS y reguladores" },
+    "E-TIERRA":             { "color": 92, "linetype": "Continuous", "lineweight": 0.25, "description": "Sistema de tierra física" },
+    "E-EMERGENCIA":         { "color": 1,  "linetype": "DASHED",     "lineweight": 0.35, "description": "Circuitos de emergencia" },
+    "E-COTAS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Acotado eléctrico" },
+    "E-TEXTO":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Textos y etiquetas" },
+    "E-LEYENDA":            { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Leyenda de símbolos" }
+  },
+
+  "hvac_layers": {
+    "M-DUCTOS-SUPPLY":      { "color": 4,  "linetype": "Continuous", "lineweight": 0.50, "description": "Ductos de suministro" },
+    "M-DUCTOS-RETURN":      { "color": 5,  "linetype": "HIDDEN",     "lineweight": 0.50, "description": "Ductos de retorno" },
+    "M-DUCTOS-EXHAUST":     { "color": 9,  "linetype": "DASHED",     "lineweight": 0.35, "description": "Ductos de extracción" },
+    "M-DUCTOS-OA":          { "color": 3,  "linetype": "Continuous", "lineweight": 0.35, "description": "Ductos aire exterior" },
+    "M-EQUIPO":             { "color": 4,  "linetype": "Continuous", "lineweight": 0.50, "description": "Equipos HVAC" },
+    "M-EQUIPO-SIMB":        { "color": 4,  "linetype": "Continuous", "lineweight": 0.35, "description": "Símbolos de equipos" },
+    "M-DIFUSORES":          { "color": 140,"linetype": "Continuous", "lineweight": 0.25, "description": "Difusores y rejillas" },
+    "M-TUBERIAS-REFR":      { "color": 30, "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías de refrigerante" },
+    "M-TUBERIAS-CHW":       { "color": 5,  "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías agua helada" },
+    "M-TUBERIAS-HW":        { "color": 1,  "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías agua caliente" },
+    "M-COTAS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Acotado HVAC" },
+    "M-TEXTO":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Textos HVAC" }
+  },
+
+  "hydraulic_layers": {
+    "H-AGUA-FRIA":          { "color": 4,  "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías agua fría" },
+    "H-AGUA-CAL":           { "color": 1,  "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías agua caliente" },
+    "H-AGUA-RECIRCULACION": { "color": 30, "linetype": "HIDDEN",     "lineweight": 0.25, "description": "Recirculación de agua caliente" },
+    "H-CISTERNA":           { "color": 5,  "linetype": "Continuous", "lineweight": 0.50, "description": "Cisternas y tinacos" },
+    "H-EQUIPO":             { "color": 4,  "linetype": "Continuous", "lineweight": 0.50, "description": "Equipos hidráulicos" },
+    "H-ARTEFACTOS":         { "color": 7,  "linetype": "Continuous", "lineweight": 0.25, "description": "Muebles sanitarios" },
+    "H-COTAS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Acotado hidráulico" },
+    "H-TEXTO":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Textos hidráulico" }
+  },
+
+  "sanitary_layers": {
+    "S-DRENAJE":            { "color": 92, "linetype": "Continuous", "lineweight": 0.35, "description": "Tuberías de drenaje" },
+    "S-DRENAJE-PLUVIAL":    { "color": 3,  "linetype": "DASHED",     "lineweight": 0.35, "description": "Drenaje pluvial" },
+    "S-VENTILACION":        { "color": 9,  "linetype": "HIDDEN",     "lineweight": 0.25, "description": "Tuberías de ventilación" },
+    "S-BAJANTES":           { "color": 92, "linetype": "Continuous", "lineweight": 0.50, "description": "Bajantes de aguas negras" },
+    "S-REGISTROS":          { "color": 8,  "linetype": "Continuous", "lineweight": 0.25, "description": "Registros y coladeras" },
+    "S-ARTEFACTOS":         { "color": 7,  "linetype": "Continuous", "lineweight": 0.25, "description": "Artefactos sanitarios" },
+    "S-COTAS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Acotado sanitario" }
+  },
+
+  "gas_layers": {
+    "G-ALIMENTACION":       { "color": 30, "linetype": "Continuous", "lineweight": 0.50, "description": "Tubería principal gas" },
+    "G-RAMALES":            { "color": 30, "linetype": "Continuous", "lineweight": 0.35, "description": "Ramales de gas" },
+    "G-EQUIPOS":            { "color": 30, "linetype": "Continuous", "lineweight": 0.50, "description": "Equipos de gas" },
+    "G-VALVULAS":           { "color": 1,  "linetype": "Continuous", "lineweight": 0.35, "description": "Válvulas de gas" },
+    "G-MEDIDORES":          { "color": 6,  "linetype": "Continuous", "lineweight": 0.35, "description": "Medidores" },
+    "G-COTAS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Acotado gas" }
+  },
+
+  "general_layers": {
+    "X-EJES":               { "color": 8,  "linetype": "CENTER",     "lineweight": 0.18, "description": "Ejes de columnas" },
+    "X-NORTE":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.35, "description": "Rosa de los vientos / Norte" },
+    "X-NIVEL":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.18, "description": "Indicadores de nivel" },
+    "X-REFERENCIA":         { "color": 9,  "linetype": "Continuous", "lineweight": 0.18, "description": "Líneas de referencia" },
+    "A-MUROS":              { "color": 7,  "linetype": "Continuous", "lineweight": 0.35, "description": "Muros arquitectónicos" },
+    "A-LOSAS":              { "color": 253,"linetype": "Continuous", "lineweight": 0.25, "description": "Losas y entrepisos" }
+  },
+
+  "validation_rules": {
+    "forbidden_layers": ["0", "Defpoints"],
+    "objects_allowed_on_layer_0": ["Block definitions only"],
+    "required_layers_per_discipline": {
+      "electrical": ["E-ALIMENTADORES", "E-CIRCUITOS", "E-TABLEROS", "E-TEXTO"],
+      "hvac": ["M-DUCTOS-SUPPLY", "M-EQUIPO", "M-TEXTO"],
+      "hydraulic": ["H-AGUA-FRIA", "H-ARTEFACTOS", "H-TEXTO"],
+      "sanitary": ["S-DRENAJE", "S-ARTEFACTOS"],
+      "gas": ["G-ALIMENTACION", "G-RAMALES"]
+    },
+    "color_by_layer": true,
+    "linetype_by_layer": true,
+    "lineweight_by_layer": true
+  }
+}
