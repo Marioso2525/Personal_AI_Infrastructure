@@ -1,0 +1,45 @@
+{
+  "env": {
+    "PAI_DIR": "${HOME}/.pai-engineering",
+    "DA": "EngineeringAI",
+    "TIME_ZONE": "America/Cancun"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun ${PAI_DIR}/hooks/SecurityValidatorHook.ts"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun ${PAI_DIR}/hooks/HistorySystemHook.ts"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun ${PAI_DIR}/hooks/EngineeringContextLoader.ts"
+          },
+          {
+            "type": "command",
+            "command": "bun ${PAI_DIR}/hooks/ProjectContextHook.ts"
+          }
+        ]
+      }
+    ]
+  }
+}

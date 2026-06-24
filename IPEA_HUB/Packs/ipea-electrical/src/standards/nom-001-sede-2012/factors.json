@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "standard": "NOM-001-SEDE-2012",
+    "section": "310.15",
+    "description": "Factores de corrección y ajuste de ampacidad"
+  },
+
+  "temperature_correction_factors": {
+    "_description": "Factores de corrección por temperatura ambiente. Base: 30°C.",
+    "_reference": "NOM-001-SEDE-2012 Table 310.15(B)(2)(a)",
+    "ambient_temp_C": {
+      "10":  { "60C": 1.29, "75C": 1.20, "90C": 1.15 },
+      "11":  { "60C": 1.29, "75C": 1.20, "90C": 1.15 },
+      "15":  { "60C": 1.22, "75C": 1.15, "90C": 1.12 },
+      "16":  { "60C": 1.22, "75C": 1.15, "90C": 1.12 },
+      "20":  { "60C": 1.15, "75C": 1.11, "90C": 1.08 },
+      "21":  { "60C": 1.08, "75C": 1.05, "90C": 1.04 },
+      "22":  { "60C": 1.08, "75C": 1.05, "90C": 1.04 },
+      "23":  { "60C": 1.08, "75C": 1.05, "90C": 1.04 },
+      "24":  { "60C": 1.08, "75C": 1.05, "90C": 1.04 },
+      "25":  { "60C": 1.08, "75C": 1.05, "90C": 1.04 },
+      "26":  { "60C": 1.00, "75C": 1.00, "90C": 1.00 },
+      "27":  { "60C": 1.00, "75C": 1.00, "90C": 1.00 },
+      "28":  { "60C": 1.00, "75C": 1.00, "90C": 1.00 },
+      "29":  { "60C": 1.00, "75C": 1.00, "90C": 1.00 },
+      "30":  { "60C": 1.00, "75C": 1.00, "90C": 1.00 },
+      "31":  { "60C": 0.91, "75C": 0.94, "90C": 0.96 },
+      "32":  { "60C": 0.91, "75C": 0.94, "90C": 0.96 },
+      "33":  { "60C": 0.91, "75C": 0.94, "90C": 0.96 },
+      "34":  { "60C": 0.91, "75C": 0.94, "90C": 0.96 },
+      "35":  { "60C": 0.91, "75C": 0.94, "90C": 0.96 },
+      "36":  { "60C": 0.82, "75C": 0.88, "90C": 0.91 },
+      "37":  { "60C": 0.82, "75C": 0.88, "90C": 0.91 },
+      "38":  { "60C": 0.82, "75C": 0.88, "90C": 0.91 },
+      "39":  { "60C": 0.82, "75C": 0.88, "90C": 0.91 },
+      "40":  { "60C": 0.82, "75C": 0.88, "90C": 0.91 },
+      "41":  { "60C": 0.71, "75C": 0.82, "90C": 0.87 },
+      "42":  { "60C": 0.71, "75C": 0.82, "90C": 0.87 },
+      "43":  { "60C": 0.71, "75C": 0.82, "90C": 0.87 },
+      "44":  { "60C": 0.71, "75C": 0.82, "90C": 0.87 },
+      "45":  { "60C": 0.71, "75C": 0.82, "90C": 0.87 },
+      "46":  { "60C": 0.58, "75C": 0.75, "90C": 0.82 },
+      "47":  { "60C": 0.58, "75C": 0.75, "90C": 0.82 },
+      "48":  { "60C": 0.58, "75C": 0.75, "90C": 0.82 },
+      "49":  { "60C": 0.58, "75C": 0.75, "90C": 0.82 },
+      "50":  { "60C": 0.58, "75C": 0.75, "90C": 0.82 },
+      "51":  { "60C": 0.41, "75C": 0.67, "90C": 0.76 },
+      "52":  { "60C": 0.41, "75C": 0.67, "90C": 0.76 },
+      "53":  { "60C": 0.41, "75C": 0.67, "90C": 0.76 },
+      "54":  { "60C": 0.41, "75C": 0.67, "90C": 0.76 },
+      "55":  { "60C": 0.41, "75C": 0.67, "90C": 0.76 },
+      "56":  { "60C": null, "75C": 0.58, "90C": 0.71 },
+      "57":  { "60C": null, "75C": 0.58, "90C": 0.71 },
+      "58":  { "60C": null, "75C": 0.58, "90C": 0.71 },
+      "59":  { "60C": null, "75C": 0.58, "90C": 0.71 },
+      "60":  { "60C": null, "75C": 0.58, "90C": 0.71 },
+      "61":  { "60C": null, "75C": null, "90C": 0.65 },
+      "65":  { "60C": null, "75C": null, "90C": 0.58 },
+      "70":  { "60C": null, "75C": null, "90C": 0.50 },
+      "75":  { "60C": null, "75C": null, "90C": 0.41 },
+      "80":  { "60C": null, "75C": null, "90C": 0.29 }
+    }
+  },
+
+  "bundling_adjustment_factors": {
+    "_description": "Factores de ajuste por agrupamiento de conductores (más de 3 conductores en conduit).",
+    "_reference": "NOM-001-SEDE-2012 Table 310.15(C)(1)",
+    "4_to_6":   0.80,
+    "7_to_9":   0.70,
+    "10_to_20": 0.50,
+    "21_to_30": 0.45,
+    "31_to_40": 0.40,
+    "41_plus":  0.35
+  },
+
+  "demand_factors_dwelling": {
+    "_description": "Factores de demanda para unidades habitacionales.",
+    "_reference": "NOM-001-SEDE-2012 Table 220.42",
+    "first_3000_VA": 1.00,
+    "next_117000_VA": 0.35,
+    "remainder": 0.25
+  },
+
+  "demand_factors_motors": {
+    "_description": "Factores de demanda para cargas de motores.",
+    "largest_motor_factor": 1.25,
+    "all_other_motors": 1.00
+  },
+
+  "power_factor_typical": {
+    "_description": "Factores de potencia típicos por tipo de carga.",
+    "resistive_heating": 1.00,
+    "incandescent": 1.00,
+    "led": 0.90,
+    "fluorescent_ballast": 0.85,
+    "induction_motor_full_load": 0.85,
+    "induction_motor_partial_load": 0.70,
+    "air_compressor": 0.80,
+    "welding_machine": 0.60,
+    "elevator": 0.75,
+    "computer_ups": 0.90
+  },
+
+  "protection_sizing_factors": {
+    "_description": "Factores para dimensionar protecciones según NOM-001-SEDE-2012.",
+    "continuous_loads_factor": 1.25,
+    "motor_breaker_max_factor": 2.50,
+    "motor_fuse_max_factor": 3.00,
+    "motor_dual_element_fuse_max_factor": 1.75,
+    "motor_inverse_time_breaker_max_factor": 2.50
+  },
+
+  "service_entrance_sizing": {
+    "_description": "Mínimos para acometidas residenciales en México.",
+    "residential_minimum_ampacity": 100,
+    "residential_minimum_conductor": "2AWG",
+    "commercial_general_minimum": 200
+  }
+}

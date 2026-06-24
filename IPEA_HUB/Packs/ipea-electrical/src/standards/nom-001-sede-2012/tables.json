@@ -1,0 +1,216 @@
+{
+  "_meta": {
+    "standard": "NOM-001-SEDE-2012",
+    "title": "Instalaciones Eléctricas (Utilización)",
+    "version": "2012",
+    "country": "México",
+    "reference_nec": "NEC-2011",
+    "source_table": "310.15(B)(16)"
+  },
+
+  "conductor_ampacity_copper": {
+    "_description": "Ampacidad de conductores de cobre en conduit. Temperatura ambiente de referencia: 30°C.",
+    "_units": "Amperes",
+    "14AWG": { "60C": 15, "75C": 20, "90C": 25, "mm2": 2.08 },
+    "12AWG": { "60C": 20, "75C": 25, "90C": 30, "mm2": 3.31 },
+    "10AWG": { "60C": 30, "75C": 35, "90C": 40, "mm2": 5.26 },
+    "8AWG":  { "60C": 40, "75C": 50, "90C": 55, "mm2": 8.37 },
+    "6AWG":  { "60C": 55, "75C": 65, "90C": 75, "mm2": 13.3 },
+    "4AWG":  { "60C": 70, "75C": 85, "90C": 95, "mm2": 21.1 },
+    "3AWG":  { "60C": 85, "75C": 100, "90C": 110, "mm2": 26.7 },
+    "2AWG":  { "60C": 95, "75C": 115, "90C": 130, "mm2": 33.6 },
+    "1AWG":  { "60C": 110, "75C": 130, "90C": 150, "mm2": 42.4 },
+    "1/0AWG": { "60C": 125, "75C": 150, "90C": 170, "mm2": 53.5 },
+    "2/0AWG": { "60C": 145, "75C": 175, "90C": 195, "mm2": 67.4 },
+    "3/0AWG": { "60C": 165, "75C": 200, "90C": 225, "mm2": 85.0 },
+    "4/0AWG": { "60C": 195, "75C": 230, "90C": 260, "mm2": 107.2 },
+    "250kcmil": { "60C": 215, "75C": 255, "90C": 290, "mm2": 126.7 },
+    "300kcmil": { "60C": 240, "75C": 285, "90C": 320, "mm2": 152.0 },
+    "350kcmil": { "60C": 260, "75C": 310, "90C": 350, "mm2": 177.3 },
+    "400kcmil": { "60C": 280, "75C": 335, "90C": 380, "mm2": 202.7 },
+    "500kcmil": { "60C": 320, "75C": 380, "90C": 430, "mm2": 253.4 },
+    "600kcmil": { "60C": 355, "75C": 420, "90C": 475, "mm2": 304.0 },
+    "700kcmil": { "60C": 385, "75C": 460, "90C": 520, "mm2": 354.7 },
+    "750kcmil": { "60C": 400, "75C": 475, "90C": 535, "mm2": 380.0 },
+    "800kcmil": { "60C": 410, "75C": 490, "90C": 555, "mm2": 405.4 },
+    "1000kcmil": { "60C": 455, "75C": 545, "90C": 615, "mm2": 507.0 }
+  },
+
+  "conductor_ampacity_aluminum": {
+    "_description": "Ampacidad de conductores de aluminio en conduit. Temperatura ambiente: 30°C.",
+    "_units": "Amperes",
+    "12AWG": { "60C": 15, "75C": 20, "90C": 25, "mm2": 3.31 },
+    "10AWG": { "60C": 25, "75C": 30, "90C": 35, "mm2": 5.26 },
+    "8AWG":  { "60C": 30, "75C": 40, "90C": 45, "mm2": 8.37 },
+    "6AWG":  { "60C": 40, "75C": 50, "90C": 55, "mm2": 13.3 },
+    "4AWG":  { "60C": 55, "75C": 65, "90C": 75, "mm2": 21.1 },
+    "2AWG":  { "60C": 75, "75C": 90, "90C": 100, "mm2": 33.6 },
+    "1AWG":  { "60C": 85, "75C": 100, "90C": 115, "mm2": 42.4 },
+    "1/0AWG": { "60C": 100, "75C": 120, "90C": 135, "mm2": 53.5 },
+    "2/0AWG": { "60C": 115, "75C": 135, "90C": 150, "mm2": 67.4 },
+    "3/0AWG": { "60C": 130, "75C": 155, "90C": 175, "mm2": 85.0 },
+    "4/0AWG": { "60C": 150, "75C": 180, "90C": 205, "mm2": 107.2 },
+    "250kcmil": { "60C": 170, "75C": 205, "90C": 230, "mm2": 126.7 },
+    "300kcmil": { "60C": 190, "75C": 230, "90C": 255, "mm2": 152.0 },
+    "350kcmil": { "60C": 210, "75C": 250, "90C": 280, "mm2": 177.3 },
+    "400kcmil": { "60C": 225, "75C": 270, "90C": 305, "mm2": 202.7 },
+    "500kcmil": { "60C": 260, "75C": 310, "90C": 350, "mm2": 253.4 }
+  },
+
+  "resistance_copper_mohm_per_m": {
+    "_description": "Resistencia DC de conductores de cobre a 75°C (mΩ/m)",
+    "_reference": "NEC Table 9",
+    "14AWG": 10.50,
+    "12AWG": 6.560,
+    "10AWG": 4.130,
+    "8AWG":  2.600,
+    "6AWG":  1.640,
+    "4AWG":  1.040,
+    "3AWG":  0.822,
+    "2AWG":  0.651,
+    "1AWG":  0.515,
+    "1/0AWG": 0.411,
+    "2/0AWG": 0.327,
+    "3/0AWG": 0.254,
+    "4/0AWG": 0.205,
+    "250kcmil": 0.171,
+    "300kcmil": 0.144,
+    "350kcmil": 0.123,
+    "400kcmil": 0.107,
+    "500kcmil": 0.0858,
+    "600kcmil": 0.0715,
+    "700kcmil": 0.0611,
+    "750kcmil": 0.0570,
+    "1000kcmil": 0.0427
+  },
+
+  "resistance_aluminum_mohm_per_m": {
+    "_description": "Resistencia DC de conductores de aluminio a 75°C (mΩ/m)",
+    "12AWG": 10.80,
+    "10AWG": 6.780,
+    "8AWG":  4.280,
+    "6AWG":  2.690,
+    "4AWG":  1.700,
+    "2AWG":  1.070,
+    "1AWG":  0.848,
+    "1/0AWG": 0.673,
+    "2/0AWG": 0.534,
+    "3/0AWG": 0.424,
+    "4/0AWG": 0.336,
+    "250kcmil": 0.281,
+    "300kcmil": 0.236,
+    "350kcmil": 0.201,
+    "400kcmil": 0.177,
+    "500kcmil": 0.141
+  },
+
+  "conduit_emt_fill": {
+    "_description": "Relleno de conduit EMT (%) — NEC Chapter 9, Tables 4 & 5",
+    "_max_fill_1_conductor": 53,
+    "_max_fill_2_conductors": 31,
+    "_max_fill_3plus_conductors": 40,
+    "1/2\"": {
+      "id_mm": 15.80,
+      "area_mm2": 196.1,
+      "conductors_12AWG_THHN": 4,
+      "conductors_10AWG_THHN": 3
+    },
+    "3/4\"": {
+      "id_mm": 20.90,
+      "area_mm2": 342.9,
+      "conductors_12AWG_THHN": 7,
+      "conductors_10AWG_THHN": 5
+    },
+    "1\"": {
+      "id_mm": 26.60,
+      "area_mm2": 555.9,
+      "conductors_12AWG_THHN": 11,
+      "conductors_10AWG_THHN": 8
+    },
+    "1-1/4\"": {
+      "id_mm": 35.10,
+      "area_mm2": 967.8,
+      "conductors_12AWG_THHN": 19,
+      "conductors_10AWG_THHN": 14
+    },
+    "1-1/2\"": {
+      "id_mm": 40.90,
+      "area_mm2": 1313.8,
+      "conductors_12AWG_THHN": 26,
+      "conductors_10AWG_THHN": 19
+    },
+    "2\"": {
+      "id_mm": 52.50,
+      "area_mm2": 2164.0,
+      "conductors_12AWG_THHN": 43,
+      "conductors_10AWG_THHN": 32
+    },
+    "2-1/2\"": {
+      "id_mm": 62.70,
+      "area_mm2": 3088.7,
+      "conductors_12AWG_THHN": 61,
+      "conductors_10AWG_THHN": 45
+    },
+    "3\"": {
+      "id_mm": 77.90,
+      "area_mm2": 4762.8,
+      "conductors_12AWG_THHN": 95,
+      "conductors_10AWG_THHN": 70
+    },
+    "3-1/2\"": {
+      "id_mm": 90.10,
+      "area_mm2": 6381.5,
+      "conductors_12AWG_THHN": 127,
+      "conductors_10AWG_THHN": 94
+    },
+    "4\"": {
+      "id_mm": 102.3,
+      "area_mm2": 8220.3,
+      "conductors_12AWG_THHN": 163,
+      "conductors_10AWG_THHN": 121
+    }
+  },
+
+  "conductor_area_thhn_mm2": {
+    "_description": "Área de conductores THHN/THWN en mm²",
+    "14AWG": 8.968,
+    "12AWG": 11.61,
+    "10AWG": 16.00,
+    "8AWG":  24.58,
+    "6AWG":  36.90,
+    "4AWG":  52.87,
+    "3AWG":  62.77,
+    "2AWG":  76.77,
+    "1AWG":  103.9,
+    "1/0AWG": 127.7,
+    "2/0AWG": 152.0,
+    "3/0AWG": 183.2,
+    "4/0AWG": 222.0,
+    "250kcmil": 282.0,
+    "300kcmil": 318.0,
+    "350kcmil": 358.0,
+    "400kcmil": 399.0,
+    "500kcmil": 490.0
+  },
+
+  "standard_conductor_sizes_awg_order": [
+    "14AWG", "12AWG", "10AWG", "8AWG", "6AWG", "4AWG", "3AWG", "2AWG",
+    "1AWG", "1/0AWG", "2/0AWG", "3/0AWG", "4/0AWG",
+    "250kcmil", "300kcmil", "350kcmil", "400kcmil", "500kcmil",
+    "600kcmil", "700kcmil", "750kcmil", "800kcmil", "1000kcmil"
+  ],
+
+  "voltage_drop_limits_nom": {
+    "_reference": "NOM-001-SEDE-2012 Sección 210.19(A)(1) Informational Note No.4",
+    "branch_circuits_max_percent": 3,
+    "feeders_max_percent": 3,
+    "combined_total_max_percent": 5
+  },
+
+  "service_voltages_mexico": {
+    "single_phase_2w": [120, 127],
+    "single_phase_3w": [120, 240],
+    "three_phase_3w_delta": [208, 220, 440, 480],
+    "three_phase_4w_wye": [127, 220, 220, 380, 440]
+  }
+}

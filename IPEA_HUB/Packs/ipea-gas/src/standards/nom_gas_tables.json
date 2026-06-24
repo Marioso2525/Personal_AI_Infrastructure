@@ -1,0 +1,147 @@
+{
+  "_meta": {
+    "standards": ["NOM-004-SEDG-2004", "NOM-002-SECRE-2010", "NOM-003-SEDG-2004"],
+    "description": "Tablas normativas para instalaciones de gas LP y Gas Natural en México",
+    "version": "2004-2010"
+  },
+
+  "gas_properties": {
+    "lp_gas": {
+      "name": "Gas LP (Propano-Butano)",
+      "formula": "C3H8 / C4H10",
+      "density_kg_m3_15C": 2.00,
+      "specific_gravity_vs_air": 1.55,
+      "lower_heating_value_MJ_m3": 93.3,
+      "upper_heating_value_MJ_m3": 101.2,
+      "stoichiometric_air_m3_per_m3_gas": 24.0,
+      "color": "Incoloro",
+      "odor": "Mercaptano añadido (detectable)",
+      "flammability_limits_pct": { "lower": 1.8, "upper": 9.5 },
+      "autoignition_temp_C": 470
+    },
+    "natural_gas": {
+      "name": "Gas Natural (Metano)",
+      "formula": "CH4",
+      "density_kg_m3_15C": 0.75,
+      "specific_gravity_vs_air": 0.60,
+      "lower_heating_value_MJ_m3": 37.3,
+      "upper_heating_value_MJ_m3": 41.4,
+      "stoichiometric_air_m3_per_m3_gas": 9.5,
+      "color": "Incoloro",
+      "odor": "Mercaptano añadido",
+      "flammability_limits_pct": { "lower": 5.0, "upper": 15.0 },
+      "autoignition_temp_C": 540
+    }
+  },
+
+  "pressure_levels": {
+    "_reference": "NOM-004-SEDG-2004 §4",
+    "low_pressure": {
+      "description": "Baja presión — instalaciones domésticas y comerciales ligeras",
+      "max_kPa": 3.5,
+      "typical_service_kPa": 2.8,
+      "max_pressure_drop_Pa": 125,
+      "applications": ["Doméstico", "Comercial pequeño", "Restaurante"]
+    },
+    "medium_pressure_a": {
+      "description": "Media presión A — comercial e industrial ligero",
+      "range_kPa": [3.5, 68.9],
+      "max_pressure_drop_pct": 10,
+      "applications": ["Comercial grande", "Industrial ligero"]
+    },
+    "medium_pressure_b": {
+      "description": "Media presión B — industrial",
+      "range_kPa": [68.9, 690],
+      "applications": ["Industrial", "Generación eléctrica"]
+    },
+    "high_pressure": {
+      "description": "Alta presión — transporte y distribución",
+      "min_kPa": 690,
+      "applications": ["Gasoductos", "Distribución regional"]
+    }
+  },
+
+  "pipe_materials_allowed": {
+    "_reference": "NOM-004-SEDG-2004 §5.3",
+    "interior_lp": {
+      "allowed": ["Acero negro Schedule 40", "Cobre tipo L o K", "Tubo corrugado inoxidable CSST"],
+      "forbidden": ["PVC", "Aluminio en interiores", "Tubo galvanizado (para LP)"],
+      "notes": "El gas LP puede atacar el zinc del galvanizado"
+    },
+    "interior_natural_gas": {
+      "allowed": ["Acero negro Schedule 40", "Acero galvanizado", "Cobre tipo L o K", "CSST"],
+      "forbidden": ["PVC en interiores"],
+      "notes": "Gas natural compatible con galvanizado"
+    },
+    "buried": {
+      "allowed": ["Polietileno PE 80/100 (PE-AL-PE)", "Acero con recubrimiento anticorrosivo"],
+      "forbidden": ["Cobre enterrado sin protección", "PVC rígido"],
+      "notes": "Mínimo 0.60m de profundidad, señalización cada 5m"
+    }
+  },
+
+  "appliance_consumption_m3_h": {
+    "_reference": "NOM-004-SEDG-2004 Anexo A / Datos fabricantes",
+    "_description": "Consumo típico de aparatos en m³/h por tipo de gas",
+    "estufa_domestica_4_quemadores":  { "lp": 2.0,  "natural": 4.0 },
+    "estufa_domestica_6_quemadores":  { "lp": 3.0,  "natural": 6.0 },
+    "calentador_instantaneo_8L":      { "lp": 3.5,  "natural": 7.0 },
+    "calentador_instantaneo_11L":     { "lp": 5.0,  "natural": 10.0 },
+    "calentador_instantaneo_16L":     { "lp": 7.5,  "natural": 15.0 },
+    "calentador_deposito_40gal":      { "lp": 4.5,  "natural": 8.5 },
+    "calentador_deposito_80gal":      { "lp": 6.0,  "natural": 12.0 },
+    "secadora_domestica":             { "lp": 3.0,  "natural": 5.5 },
+    "horno_conveccion_industrial":    { "lp": 12.0, "natural": 22.0 },
+    "freidora_industrial":            { "lp": 8.0,  "natural": 15.0 },
+    "parrilla_restaurante":           { "lp": 6.0,  "natural": 11.0 },
+    "quemador_salamandra":            { "lp": 15.0, "natural": 28.0 },
+    "caldera_100kW":                  { "lp": 12.0, "natural": 22.0 },
+    "caldera_200kW":                  { "lp": 24.0, "natural": 44.0 },
+    "generador_5kW":                  { "lp": 4.0,  "natural": 7.5 },
+    "generador_25kW":                 { "lp": 18.0, "natural": 33.0 }
+  },
+
+  "simultaneity_factors": {
+    "_reference": "NOM-004-SEDG-2004 §6.2",
+    "_description": "Factor de simultaneidad según número de aparatos",
+    "1":  1.00,
+    "2":  0.90,
+    "3":  0.80,
+    "4":  0.75,
+    "5":  0.70,
+    "6":  0.65,
+    "7":  0.60,
+    "8":  0.58,
+    "9":  0.55,
+    "10": 0.52,
+    "15": 0.45,
+    "20": 0.40,
+    "30": 0.35,
+    "50": 0.30
+  },
+
+  "velocity_limits": {
+    "_reference": "NOM-004-SEDG-2004 §6.3",
+    "low_pressure_max_m_s": 10.0,
+    "medium_pressure_max_m_s": 15.0,
+    "high_pressure_max_m_s": 20.0
+  },
+
+  "safety_clearances_mm": {
+    "_reference": "NOM-004-SEDG-2004 §5.5",
+    "from_electrical_conduit": 50,
+    "from_electrical_panel": 300,
+    "from_open_flame": 150,
+    "from_water_pipe_parallel": 50,
+    "from_water_pipe_crossing": 25,
+    "buried_depth_min_mm": 600,
+    "from_building_structure": 25
+  },
+
+  "valve_requirements": {
+    "main_shutoff": "Requerida en acometida, accesible, identificada",
+    "per_appliance": "Válvula de servicio a máx 1.5m de cada aparato",
+    "type_lp": "Válvulas de paso tipo bola o mariposa, certificadas",
+    "emergency_shutoff": "En instalaciones con >5 aparatos o >50 m³/h"
+  }
+}
